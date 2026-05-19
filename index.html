@@ -692,59 +692,6 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
     max-width:340px;
     margin:0 auto 60px;
     padding:0 20px;
-    text-align:center;
-  }
-  .tdm-item{
-    padding:20px 16px;
-    background:#DBEAFE;
-    background:rgba(219,234,254,0.5);
-    border:1px solid #3B82F6;
-    margin-bottom:0;
-  }
-  .tdm-name{
-    font-family:'Instrument Serif',Georgia,serif;
-    font-style:italic;
-    font-size:20px;
-    color:var(--ink);
-    line-height:1.2;
-    margin-bottom:4px;
-  }
-  .tdm-what{
-    font-family:'IBM Plex Sans',sans-serif;
-    font-size:13px;
-    color:var(--ink-mid);
-  }
-  .tdm-plus{
-    font-family:'Instrument Serif',Georgia,serif;
-    font-size:24px;
-    color:var(--accent);
-    padding:14px 0;
-    line-height:1;
-  }
-  .tdm-arrow{
-    font-size:32px;
-    color:var(--accent);
-    padding:14px 0;
-    line-height:1;
-  }
-  .tdm-result{
-    background:var(--ink);
-    padding:32px 20px;
-    margin-top:8px;
-  }
-  .tdm-label{
-    font-family:'IBM Plex Mono',monospace;
-    font-size:11px;
-    letter-spacing:3px;
-    color:var(--accent);
-    margin-bottom:8px;
-  }
-  .tdm-title{
-    font-family:'Instrument Serif',Georgia,serif;
-    font-style:italic;
-    font-size:26px;
-    color:var(--bg-white);
-    line-height:1.1;
   }
 }
 .three-disc-svg{
@@ -808,25 +755,25 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
   </div>
 
   <div class="three-disc-mobile">
-    <div class="tdm-item">
-      <div class="tdm-name">нейроэндокринология</div>
-      <div class="tdm-what">изучает гормоны</div>
-    </div>
-    <div class="tdm-plus">+</div>
-    <div class="tdm-item">
-      <div class="tdm-name">психология денег</div>
-      <div class="tdm-what">изучает установки</div>
-    </div>
-    <div class="tdm-plus">+</div>
-    <div class="tdm-item">
-      <div class="tdm-name">нейробиология решений</div>
-      <div class="tdm-what">изучает выбор</div>
-    </div>
-    <div class="tdm-arrow">↓</div>
-    <div class="tdm-result">
-      <div class="tdm-label">ЗДЕСЬ</div>
-      <div class="tdm-title">гормоны денег</div>
-    </div>
+    <svg viewBox="0 0 340 540" xmlns="http://www.w3.org/2000/svg" width="100%" style="display:block">
+      <circle cx="170" cy="120" r="100" fill="#DBEAFE" fill-opacity="0.55" stroke="#3B82F6" stroke-width="1.5"/>
+      <circle cx="170" cy="260" r="100" fill="#DBEAFE" fill-opacity="0.55" stroke="#3B82F6" stroke-width="1.5"/>
+      <circle cx="170" cy="400" r="100" fill="#DBEAFE" fill-opacity="0.55" stroke="#3B82F6" stroke-width="1.5"/>
+
+      <text x="170" y="48" font-family="Instrument Serif, Georgia, serif" font-style="italic" font-size="17" fill="#1F2937" text-anchor="middle">нейроэндокринология</text>
+      <text x="170" y="68" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#6B7280" text-anchor="middle">изучает гормоны</text>
+
+      <text x="170" y="495" font-family="Instrument Serif, Georgia, serif" font-style="italic" font-size="17" fill="#1F2937" text-anchor="middle">нейробиология решений</text>
+      <text x="170" y="515" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#6B7280" text-anchor="middle">изучает выбор</text>
+
+      <circle cx="170" cy="260" r="58" fill="#1F2937"/>
+      <text x="170" y="252" font-family="IBM Plex Mono, monospace" font-size="9" letter-spacing="2.5" fill="#3B82F6" text-anchor="middle">ЗДЕСЬ</text>
+      <text x="170" y="272" font-family="Instrument Serif, Georgia, serif" font-style="italic" font-size="17" fill="#F8F9FB" text-anchor="middle">гормоны</text>
+      <text x="170" y="290" font-family="Instrument Serif, Georgia, serif" font-style="italic" font-size="17" fill="#F8F9FB" text-anchor="middle">денег</text>
+
+      <text x="40" y="263" font-family="Instrument Serif, Georgia, serif" font-style="italic" font-size="14" fill="#1F2937" text-anchor="middle">психология</text>
+      <text x="40" y="280" font-family="Instrument Serif, Georgia, serif" font-style="italic" font-size="14" fill="#1F2937" text-anchor="middle">денег</text>
+    </svg>
   </div>
 
   <div class="afterthought">
@@ -1831,7 +1778,9 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
 
   /* === ЗАГОЛОВКИ === */
   h2.title{font-size:clamp(26px,6.4vw,34px);line-height:1.18;margin-bottom:24px;letter-spacing:-0.3px;max-width:100%}
+  h2.title br{display:none}
   .bigidea-claim{font-size:clamp(26px,6.4vw,34px);line-height:1.2;letter-spacing:-0.3px}
+  .bigidea-claim br{display:none}
   .lead{font-size:17px;line-height:1.55;margin-bottom:32px;max-width:100%}
   p.body{font-size:16px;line-height:1.7}
 
@@ -1841,12 +1790,12 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
 
   /* === DISCIPLINES (5 направлений) === */
   .disciplines{grid-template-columns:1fr;padding:0 20px;max-width:100%}
-  .discipline{border-right:none;border-bottom:0.5px solid var(--line);padding:28px 16px;display:grid;grid-template-columns:48px 1fr 1fr;gap:18px;align-items:center;text-align:left}
+  .discipline{border-right:none;border-bottom:0.5px solid var(--line);padding:32px 16px;text-align:center;display:block}
   .discipline:last-child{border-bottom:none}
-  .discipline-num{margin-bottom:0;font-size:9px}
-  .discipline-svg{width:36px;height:36px;margin:0}
-  .discipline-name{font-size:17px;margin-bottom:0;line-height:1.2}
-  .discipline-what{font-size:13px;margin-bottom:0;line-height:1.4}
+  .discipline-num{margin-bottom:20px;font-size:10px}
+  .discipline-svg{width:42px;height:42px;margin:0 auto 18px}
+  .discipline-name{font-size:22px;margin-bottom:8px;line-height:1.2}
+  .discipline-what{font-size:14px;line-height:1.5}
 
   /* === ГРАФИКИ ШИРИНА И ОТСТУПЫ === */
   .termostat-graphic, .three-disc, .hero-graphic{padding:0;overflow:hidden}
@@ -1920,6 +1869,7 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
   /* === FINAL === */
   .final{padding:80px 0}
   .final h2{font-size:28px;line-height:1.22}
+  .final h2 br{display:none}
   .final p.sub{font-size:15px;margin-bottom:32px}
   .final::before,.final::after{width:32px}
 
@@ -1997,7 +1947,7 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
       </div>
     </div>
     <div class="bonus-mock">
-      <img src="https://raw.githubusercontent.com/thebodymindcode/biohimmoney/main/Nano%20Banana%202%20-%20Editorial%20book%20cover%20mockup%20for%20a%20premium%20psychologybiology%20guidebook_%20A4%20portrait%20f.png" alt="Обложка мануала «Пять механизмов сдвига»">
+      <img src="https://github.com/thebodymindcode/biohimmoney/blob/main/Nano%20Banana%202%20-%20Editorial%20book%20cover%20mockup%20for%20a%20premium%20psychologybiology%20guidebook_%20A4%20portrait%20f.png?raw=true" alt="Обложка мануала «Пять механизмов сдвига»">
     </div>
   </div>
 </section>
@@ -2081,10 +2031,6 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
     <a href="#" class="cta-primary">Получить доступ к встрече →</a>
   </div>
 </section>
-
-<div class="mobile-cta-bar">
-  <a href="#tarif">Получить доступ</a>
-</div>
 
 <footer class="footer-deep">
   <div class="footer-inner">
