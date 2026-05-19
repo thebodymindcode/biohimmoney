@@ -91,6 +91,16 @@ h2.title em{font-style:italic;color:var(--accent);font-weight:400}
   font-weight:400;
   max-width:880px;
 }
+.lead-punch{
+  font-style:normal;
+  font-size:clamp(24px,2.8vw,32px);
+  color:var(--ink);
+  margin-top:32px;
+}
+.lead-punch em{
+  font-style:italic;
+  color:var(--accent);
+}
 
 p.body{
   font-family:'IBM Plex Sans',sans-serif;
@@ -421,29 +431,32 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
 }
 .result-callout{
   margin:72px auto 0;
-  max-width:780px;
+  max-width:880px;
   padding:0 clamp(20px,5vw,60px);
   text-align:center;
 }
 .result-callout .stat-text{
   font-family:'Instrument Serif',Georgia,serif;
   font-style:italic;
-  font-size:clamp(22px,2.6vw,28px);
+  font-size:clamp(20px,2.2vw,24px);
   line-height:1.45;
+  color:var(--ink-mid);
+  font-weight:400;
+  margin-bottom:32px;
+}
+.result-callout .stat-text em{color:var(--ink-mid);font-style:italic}
+.result-callout .stat-punch{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:clamp(28px,3.6vw,42px);
+  line-height:1.25;
   color:var(--ink);
   font-weight:400;
-  margin-bottom:24px;
+  letter-spacing:-0.3px;
 }
-.result-callout .stat-text em{color:var(--accent);font-style:italic}
-.result-callout .stat-meta{
-  font-family:'IBM Plex Sans',sans-serif;
-  font-size:clamp(14px,1.5vw,17px);
-  line-height:1.6;
-  color:var(--ink-mid);
-  margin-top:24px;
-  max-width:620px;
-  margin-left:auto;
-  margin-right:auto;
+.result-callout .stat-punch strong{
+  color:var(--accent);
+  font-style:italic;
+  font-weight:400;
 }
 </style>
 
@@ -454,8 +467,8 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
       <span>Что было до сих пор</span>
       <span class="line"></span>
     </div>
-    <h2 class="title">Индустрия личностного&nbsp;роста<br>построила <em>пять опор</em></h2>
-    <p class="lead">Каждое направление сделало свою работу и помогло миллионам людей. Без них не было бы и того понимания денег, которое есть сейчас.</p>
+    <h2 class="title">Тридцать лет ищут ключ<br><em>не там, где он лежит</em></h2>
+    <p class="lead">Вся индустрия личностного роста разделилась на&nbsp;пять направлений. Каждое смотрит в&nbsp;свою сторону, и&nbsp;каждое мимо.</p>
   </div>
 
   <div class="disciplines">
@@ -469,7 +482,7 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
         <path d="M 18 32 Q 24 28 30 32" fill="none" stroke="#1F2937" stroke-width="1.5" stroke-linecap="round"/>
       </svg>
       <div class="discipline-name">Психология<br>денег</div>
-      <div class="discipline-what">работает<br>с мышлением</div>
+      <div class="discipline-what">исследует<br>мышление</div>
     </div>
     <div class="discipline">
       <div class="discipline-num">02</div>
@@ -489,8 +502,8 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
         <circle cx="30" cy="38" r="2" fill="#1F2937"/>
         <circle cx="38" cy="38" r="2" fill="#1F2937"/>
       </svg>
-      <div class="discipline-name">Эзотерика<br>и&nbsp;расстановки</div>
-      <div class="discipline-what">работают с&nbsp;родом<br>и&nbsp;системой</div>
+      <div class="discipline-name">Эзотерика</div>
+      <div class="discipline-what">родовые<br>программы</div>
     </div>
     <div class="discipline">
       <div class="discipline-num">03</div>
@@ -503,7 +516,7 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
         <text x="35" y="31" font-family="IBM Plex Sans, sans-serif" font-size="6" fill="#1F2937" text-anchor="middle" font-weight="600">₽</text>
       </svg>
       <div class="discipline-name">Финансовая<br>грамотность</div>
-      <div class="discipline-what">работает<br>с&nbsp;поведением</div>
+      <div class="discipline-what">поведение</div>
     </div>
     <div class="discipline">
       <div class="discipline-num">04</div>
@@ -517,8 +530,8 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
         <circle cx="10" cy="32" r="2.5" fill="#3B82F6" opacity="0.6"/>
         <circle cx="38" cy="32" r="2.5" fill="#3B82F6" opacity="0.6"/>
       </svg>
-      <div class="discipline-name">Системные<br>расстановки</div>
-      <div class="discipline-what">работают<br>с&nbsp;позициями</div>
+      <div class="discipline-name">Расстановки</div>
+      <div class="discipline-what">системные<br>позиции</div>
     </div>
     <div class="discipline">
       <div class="discipline-num">05</div>
@@ -529,14 +542,14 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
         <line x1="24" y1="6" x2="24" y2="10" stroke="#3B82F6" stroke-width="2"/>
         <polygon points="24,12 21,8 27,8" fill="#3B82F6"/>
       </svg>
-      <div class="discipline-name">Коучинг<br>целей</div>
-      <div class="discipline-what">работает<br>с&nbsp;действиями</div>
+      <div class="discipline-name">Коучинг</div>
+      <div class="discipline-what">цели<br>и&nbsp;действия</div>
     </div>
   </div>
 
   <div class="result-callout">
-    <p class="stat-text">И всё же у&nbsp;большинства людей результат не&nbsp;меняется надолго. Пятый курс, десятая книга, двадцатая расстановка, и&nbsp;через две недели тело <em>возвращает обратно.</em></p>
-    <p class="stat-meta">Возможно, дело не&nbsp;в&nbsp;этих методах. Возможно, дело в&nbsp;элементе, которого они не&nbsp;касаются.</p>
+    <p class="stat-text"><em>Тысячи книг, миллионы курсов, бесчисленные методики.</em></p>
+    <p class="stat-punch">И при этом результат у&nbsp;большинства людей <strong>не&nbsp;меняется.</strong></p>
   </div>
 </section>
 
@@ -599,11 +612,12 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
   <div class="narrow text">
     <div class="eyebrow">
       <span class="line"></span>
-      <span>Что внутри</span>
+      <span>А теперь главное</span>
       <span class="line"></span>
     </div>
-    <h2 class="title">Внутри стоит <em>термостат,</em><br>который возвращает обратно</h2>
-    <p class="lead">Пятый курс, десятая книга, двадцатая расстановка. И&nbsp;через две недели тело возвращает вас ровно в&nbsp;ту&nbsp;же финансовую точку, в&nbsp;которой вы&nbsp;были.</p>
+    <h2 class="title">Они проходят пятый курс,<br>читают десятую книгу,<br>делают двадцатую расстановку.</h2>
+    <p class="lead">И&nbsp;через две-три недели тело возвращает их&nbsp;ровно в&nbsp;ту&nbsp;же финансовую точку, где они были.</p>
+    <p class="lead lead-punch">Как будто внутри стоит <em>термостат,</em><br>который сбрасывает всё обратно.</p>
   </div>
 
   <div class="termostat-graphic termostat-desktop">
@@ -693,6 +707,29 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
     margin:0 auto 60px;
     padding:0 20px;
   }
+  .tdm-list{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    margin-bottom:32px;
+    text-align:center;
+  }
+  .tdm-row{
+    padding:0;
+  }
+  .tdm-name{
+    font-family:'Instrument Serif',Georgia,serif;
+    font-style:italic;
+    font-size:20px;
+    color:var(--ink);
+    line-height:1.15;
+  }
+  .tdm-sub{
+    font-family:'IBM Plex Sans',sans-serif;
+    font-size:12px;
+    color:var(--ink-faint);
+    margin-top:2px;
+  }
 }
 .three-disc-svg{
   width:100%;
@@ -728,7 +765,7 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
       <span class="line"></span>
     </div>
     <h2 class="title">Слой, которого <em>не&nbsp;хватало</em><br>во всех разговорах о&nbsp;деньгах</h2>
-    <p class="lead">Он находится на&nbsp;стыке трёх дисциплин, которые между собой почти не&nbsp;разговаривают. Сложить их вместе&nbsp;, значит увидеть картину целиком.</p>
+    <p class="lead">Он находится на&nbsp;стыке трёх дисциплин, которые между собой почти не&nbsp;разговаривают. Сложить их вместе, значит увидеть картину целиком.</p>
   </div>
 
   <div class="three-disc three-disc-desktop">
@@ -755,28 +792,30 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
   </div>
 
   <div class="three-disc-mobile">
-    <svg viewBox="0 0 340 620" xmlns="http://www.w3.org/2000/svg" width="100%" style="display:block">
+    <div class="tdm-list">
+      <div class="tdm-row">
+        <div class="tdm-name">нейроэндокринология</div>
+        <div class="tdm-sub">изучает гормоны</div>
+      </div>
+      <div class="tdm-row">
+        <div class="tdm-name">психология денег</div>
+        <div class="tdm-sub">изучает установки</div>
+      </div>
+      <div class="tdm-row">
+        <div class="tdm-name">нейробиология решений</div>
+        <div class="tdm-sub">изучает выбор</div>
+      </div>
+    </div>
 
-      <text x="170" y="22" font-family="Instrument Serif, Georgia, serif" font-style="italic" font-size="18" fill="#1F2937" text-anchor="middle">нейроэндокринология</text>
-      <text x="170" y="42" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#6B7280" text-anchor="middle">изучает гормоны</text>
+    <svg viewBox="0 0 340 380" xmlns="http://www.w3.org/2000/svg" width="100%" style="display:block">
+      <circle cx="170" cy="100" r="90" fill="#DBEAFE" fill-opacity="0.55" stroke="#3B82F6" stroke-width="1.5"/>
+      <circle cx="115" cy="195" r="90" fill="#DBEAFE" fill-opacity="0.55" stroke="#3B82F6" stroke-width="1.5"/>
+      <circle cx="225" cy="195" r="90" fill="#DBEAFE" fill-opacity="0.55" stroke="#3B82F6" stroke-width="1.5"/>
 
-      <circle cx="170" cy="150" r="100" fill="#DBEAFE" fill-opacity="0.55" stroke="#3B82F6" stroke-width="1.5"/>
-
-      <text x="36" y="298" font-family="Instrument Serif, Georgia, serif" font-style="italic" font-size="18" fill="#1F2937" text-anchor="start">психология</text>
-      <text x="36" y="318" font-family="Instrument Serif, Georgia, serif" font-style="italic" font-size="18" fill="#1F2937" text-anchor="start">денег</text>
-      <text x="36" y="336" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#6B7280" text-anchor="start">изучает установки</text>
-
-      <circle cx="170" cy="310" r="100" fill="#DBEAFE" fill-opacity="0.55" stroke="#3B82F6" stroke-width="1.5"/>
-
-      <text x="170" y="590" font-family="Instrument Serif, Georgia, serif" font-style="italic" font-size="18" fill="#1F2937" text-anchor="middle">нейробиология решений</text>
-      <text x="170" y="610" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#6B7280" text-anchor="middle">изучает выбор</text>
-
-      <circle cx="170" cy="470" r="100" fill="#DBEAFE" fill-opacity="0.55" stroke="#3B82F6" stroke-width="1.5"/>
-
-      <circle cx="170" cy="310" r="58" fill="#1F2937"/>
-      <text x="170" y="302" font-family="IBM Plex Mono, monospace" font-size="9" letter-spacing="2.5" fill="#3B82F6" text-anchor="middle">ЗДЕСЬ</text>
-      <text x="170" y="322" font-family="Instrument Serif, Georgia, serif" font-style="italic" font-size="16" fill="#F8F9FB" text-anchor="middle">гормоны</text>
-      <text x="170" y="340" font-family="Instrument Serif, Georgia, serif" font-style="italic" font-size="16" fill="#F8F9FB" text-anchor="middle">денег</text>
+      <circle cx="170" cy="170" r="58" fill="#1F2937"/>
+      <text x="170" y="162" font-family="IBM Plex Mono, monospace" font-size="9" letter-spacing="2.5" fill="#3B82F6" text-anchor="middle">ЗДЕСЬ</text>
+      <text x="170" y="180" font-family="Instrument Serif, Georgia, serif" font-style="italic" font-size="15" fill="#F8F9FB" text-anchor="middle">гормоны</text>
+      <text x="170" y="198" font-family="Instrument Serif, Georgia, serif" font-style="italic" font-size="15" fill="#F8F9FB" text-anchor="middle">денег</text>
     </svg>
   </div>
 
@@ -860,7 +899,7 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
 
 <section class="bigidea">
   <div class="narrow">
-    <h2 class="bigidea-claim">Деньги&nbsp;это много вопросов сразу: финансовый, психологический.<br>И&nbsp;<em>биохимический</em> в&nbsp;том числе.</h2>
+    <h2 class="bigidea-claim">Деньги&nbsp;это много вопросов сразу.<br>Финансовый, психологический.<br>И&nbsp;<em>биохимический</em> в&nbsp;том числе.</h2>
   </div>
 
   <div class="bigidea-deep">
@@ -872,7 +911,7 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
   </div>
 
   <div class="bigidea-final">
-    <p>Это и&nbsp;есть тот самый термостат.<br>Не&nbsp;убеждения. Не&nbsp;травмы предков. <em>Биохимия.</em></p>
+    <p>Тот самый термостат, который возвращает вас на&nbsp;старую отметку дохода, держится не&nbsp;на&nbsp;характере и&nbsp;не&nbsp;на&nbsp;убеждениях. <em>Он держится на&nbsp;вашей биохимии.</em></p>
   </div>
 </section>
 
@@ -952,124 +991,67 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
   <div class="narrow text">
     <div class="eyebrow">
       <span class="line"></span>
-      <span>Главный механизм</span>
+      <span>Что это значит на практике</span>
       <span class="line"></span>
     </div>
-    <h2 class="title">Биохимия открывается только<br>через <em>позволение</em></h2>
-    <p class="lead">Это не&nbsp;про мотивацию и&nbsp;не&nbsp;про намерение. Это про режим, в&nbsp;который тело входит или не&nbsp;входит. Если внутри стоит запрет, никакая дисциплина его не&nbsp;сломает.</p>
+    <h2 class="title">У&nbsp;каждого человека есть<br><em>биохимический потолок</em> дохода</h2>
+    <p class="lead">Не&nbsp;«мышление бедности» и&nbsp;не&nbsp;родовой сценарий. Конкретная отметка, на&nbsp;которую настроена ваша нейроэндокринная система. У&nbsp;каждого она своя, и&nbsp;именно она решает, сколько денег вы&nbsp;удерживаете.</p>
   </div>
 
   <div class="permission-graphic permission-desktop">
-    <svg viewBox="0 0 880 320" xmlns="http://www.w3.org/2000/svg" width="100%" style="display:block">
+    <svg viewBox="0 0 880 340" xmlns="http://www.w3.org/2000/svg" width="100%" style="display:block">
 
-      <text x="240" y="40" font-family="IBM Plex Mono, monospace" font-size="16" letter-spacing="2.5" fill="#6B7280" text-anchor="middle">ЗАКРЫТО</text>
-      <text x="640" y="40" font-family="IBM Plex Mono, monospace" font-size="16" letter-spacing="2.5" fill="#3B82F6" text-anchor="middle">ПОЗВОЛЕНО</text>
+      <line x1="80" y1="300" x2="800" y2="300" stroke="#1F2937" stroke-width="1.2"/>
+      <line x1="80" y1="40" x2="80" y2="300" stroke="#1F2937" stroke-width="1.2"/>
 
-      <g transform="translate(140,80)">
-        <rect x="0" y="0" width="200" height="200" fill="#E5E7EA" stroke="#1F2937" stroke-width="2"/>
-        <line x1="100" y1="0" x2="100" y2="200" stroke="#1F2937" stroke-width="1" opacity="0.3"/>
+      <line x1="80" y1="120" x2="800" y2="120" stroke="#3B82F6" stroke-width="1" stroke-dasharray="6 5"/>
+      <text x="808" y="125" font-family="Instrument Serif, Georgia, serif" font-style="italic" font-size="16" fill="#3B82F6">ваш потолок</text>
 
-        <rect x="40" y="60" width="120" height="80" fill="none" stroke="#1F2937" stroke-width="1.5"/>
-        <text x="100" y="106" font-family="Instrument Serif, Georgia, serif" font-style="italic" font-size="18" fill="#6B7280" text-anchor="middle">мысль</text>
+      <path d="M 100 280 Q 200 220 280 165 T 440 130 L 460 125 L 460 130 Q 480 200 540 250 L 580 270 Q 660 230 720 165 T 800 130" 
+            fill="none" stroke="#1F2937" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
 
-        <line x1="0" y1="60" x2="40" y2="60" stroke="#1F2937" stroke-width="1" opacity="0.4"/>
-        <line x1="160" y1="60" x2="200" y2="60" stroke="#1F2937" stroke-width="1" opacity="0.4"/>
-        <line x1="0" y1="140" x2="40" y2="140" stroke="#1F2937" stroke-width="1" opacity="0.4"/>
-        <line x1="160" y1="140" x2="200" y2="140" stroke="#1F2937" stroke-width="1" opacity="0.4"/>
+      <circle cx="460" cy="125" r="6" fill="#1F2937"/>
 
-        <line x1="40" y1="60" x2="40" y2="140" stroke="#1F2937" stroke-width="2"/>
-        <line x1="160" y1="60" x2="160" y2="140" stroke="#1F2937" stroke-width="2"/>
+      <text x="440" y="100" font-family="Instrument Serif, Georgia, serif" font-style="italic" font-size="15" fill="#1F2937" text-anchor="end">подошли вплотную</text>
 
-        <circle cx="160" cy="100" r="3" fill="#1F2937"/>
-      </g>
+      <text x="540" y="260" font-family="Instrument Serif, Georgia, serif" font-style="italic" font-size="15" fill="#6B7280" text-anchor="start">тело откатывает обратно</text>
 
-      <g transform="translate(540,80)">
-        <rect x="0" y="0" width="200" height="200" fill="#DBEAFE" fill-opacity="0.3" stroke="#3B82F6" stroke-width="2"/>
+      <text x="80" y="325" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="2" fill="#6B7280">МЕСЯЦ 1</text>
+      <text x="800" y="325" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="2" fill="#6B7280" text-anchor="end">МЕСЯЦ 24</text>
 
-        <rect class="door-light" x="40" y="60" width="120" height="80" fill="#3B82F6" fill-opacity="0.15"/>
-
-        <g class="door-1">
-          <rect x="40" y="60" width="120" height="80" fill="none" stroke="#3B82F6" stroke-width="1.8"/>
-          <text x="100" y="106" font-family="Instrument Serif, Georgia, serif" font-style="italic" font-size="18" fill="#3B82F6" text-anchor="middle">мысль</text>
-          <circle cx="155" cy="100" r="3" fill="#3B82F6"/>
-        </g>
-
-        <circle cx="100" cy="100" r="40" fill="#3B82F6" fill-opacity="0.08" class="door-light"/>
-        <circle cx="100" cy="100" r="60" fill="none" stroke="#3B82F6" stroke-width="0.5" stroke-dasharray="2 4" opacity="0.5" class="door-light"/>
-
-        <line x1="0" y1="60" x2="40" y2="60" stroke="#3B82F6" stroke-width="1" opacity="0.4"/>
-        <line x1="160" y1="60" x2="200" y2="60" stroke="#3B82F6" stroke-width="1" opacity="0.4"/>
-        <line x1="0" y1="140" x2="40" y2="140" stroke="#3B82F6" stroke-width="1" opacity="0.4"/>
-        <line x1="160" y1="140" x2="200" y2="140" stroke="#3B82F6" stroke-width="1" opacity="0.4"/>
-      </g>
-
-      <line x1="350" y1="180" x2="530" y2="180" stroke="#3B82F6" stroke-width="1" stroke-dasharray="3 4"/>
-      <polyline points="520,172 532,180 520,188" fill="none" stroke="#3B82F6" stroke-width="1" stroke-linejoin="round"/>
-      <text x="440" y="170" font-family="Instrument Serif, Georgia, serif" font-style="italic" font-size="18" fill="#3B82F6" text-anchor="middle">позволение</text>
+      <text x="40" y="125" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="2" fill="#6B7280" text-anchor="end">+</text>
+      <text x="40" y="295" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="2" fill="#6B7280" text-anchor="end">−</text>
     </svg>
   </div>
 
   <div class="permission-graphic permission-mobile">
-    <svg viewBox="0 0 320 600" xmlns="http://www.w3.org/2000/svg" width="100%" style="display:block">
+    <svg viewBox="0 0 340 260" xmlns="http://www.w3.org/2000/svg" width="100%" style="display:block">
+      <line x1="30" y1="220" x2="320" y2="220" stroke="#1F2937" stroke-width="1.5"/>
+      <line x1="30" y1="30" x2="30" y2="220" stroke="#1F2937" stroke-width="1.5"/>
 
-      <text x="160" y="28" font-family="IBM Plex Mono, monospace" font-size="14" letter-spacing="3" fill="#6B7280" text-anchor="middle">ЗАКРЫТО</text>
+      <line x1="30" y1="80" x2="320" y2="80" stroke="#3B82F6" stroke-width="1.2" stroke-dasharray="5 4"/>
+      <text x="320" y="72" font-family="Instrument Serif, Georgia, serif" font-style="italic" font-size="14" fill="#3B82F6" text-anchor="end">ваш потолок</text>
 
-      <g transform="translate(60,50)">
-        <rect x="0" y="0" width="200" height="200" fill="#E5E7EA" stroke="#1F2937" stroke-width="2.5"/>
-        <line x1="100" y1="0" x2="100" y2="200" stroke="#1F2937" stroke-width="1" opacity="0.3"/>
+      <path d="M 40 200 Q 90 150 140 100 L 170 82 L 175 82 Q 190 140 230 180 Q 260 160 285 110 T 320 90"
+            fill="none" stroke="#1F2937" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
 
-        <rect x="40" y="60" width="120" height="80" fill="none" stroke="#1F2937" stroke-width="2"/>
-        <text x="100" y="106" font-family="Instrument Serif, Georgia, serif" font-style="italic" font-size="20" fill="#6B7280" text-anchor="middle">мысль</text>
+      <circle cx="172" cy="82" r="5" fill="#1F2937"/>
 
-        <line x1="0" y1="60" x2="40" y2="60" stroke="#1F2937" stroke-width="1.2" opacity="0.4"/>
-        <line x1="160" y1="60" x2="200" y2="60" stroke="#1F2937" stroke-width="1.2" opacity="0.4"/>
-        <line x1="0" y1="140" x2="40" y2="140" stroke="#1F2937" stroke-width="1.2" opacity="0.4"/>
-        <line x1="160" y1="140" x2="200" y2="140" stroke="#1F2937" stroke-width="1.2" opacity="0.4"/>
-
-        <line x1="40" y1="60" x2="40" y2="140" stroke="#1F2937" stroke-width="2.5"/>
-        <line x1="160" y1="60" x2="160" y2="140" stroke="#1F2937" stroke-width="2.5"/>
-
-        <circle cx="160" cy="100" r="3.5" fill="#1F2937"/>
-      </g>
-
-      <line x1="160" y1="278" x2="160" y2="320" stroke="#3B82F6" stroke-width="1.2" stroke-dasharray="3 4"/>
-      <polyline points="153,313 160,322 167,313" fill="none" stroke="#3B82F6" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
-      <text x="160" y="304" font-family="Instrument Serif, Georgia, serif" font-style="italic" font-size="16" fill="#3B82F6" text-anchor="middle">позволение</text>
-
-      <text x="160" y="350" font-family="IBM Plex Mono, monospace" font-size="14" letter-spacing="3" fill="#3B82F6" text-anchor="middle">ПОЗВОЛЕНО</text>
-
-      <g transform="translate(60,370)">
-        <rect x="0" y="0" width="200" height="200" fill="#DBEAFE" fill-opacity="0.3" stroke="#3B82F6" stroke-width="2.5"/>
-
-        <rect class="door-light" x="40" y="60" width="120" height="80" fill="#3B82F6" fill-opacity="0.15"/>
-
-        <g class="door-1">
-          <rect x="40" y="60" width="120" height="80" fill="none" stroke="#3B82F6" stroke-width="2"/>
-          <text x="100" y="106" font-family="Instrument Serif, Georgia, serif" font-style="italic" font-size="20" fill="#3B82F6" text-anchor="middle">мысль</text>
-          <circle cx="155" cy="100" r="3.5" fill="#3B82F6"/>
-        </g>
-
-        <circle cx="100" cy="100" r="40" fill="#3B82F6" fill-opacity="0.08" class="door-light"/>
-        <circle cx="100" cy="100" r="60" fill="none" stroke="#3B82F6" stroke-width="0.6" stroke-dasharray="2 4" opacity="0.5" class="door-light"/>
-
-        <line x1="0" y1="60" x2="40" y2="60" stroke="#3B82F6" stroke-width="1.2" opacity="0.4"/>
-        <line x1="160" y1="60" x2="200" y2="60" stroke="#3B82F6" stroke-width="1.2" opacity="0.4"/>
-        <line x1="0" y1="140" x2="40" y2="140" stroke="#3B82F6" stroke-width="1.2" opacity="0.4"/>
-        <line x1="160" y1="140" x2="200" y2="140" stroke="#3B82F6" stroke-width="1.2" opacity="0.4"/>
-      </g>
+      <text x="40" y="245" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="2" fill="#6B7280">МЕС. 1</text>
+      <text x="320" y="245" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="2" fill="#6B7280" text-anchor="end">МЕС. 24</text>
     </svg>
   </div>
 
   <div class="permission-text">
-    <p>Мозг не&nbsp;пускает туда, куда тело себе ещё не&nbsp;разрешило. <strong>Это не&nbsp;метафора.</strong> Это конкретный механизм, который работает на&nbsp;уровне гормонального фона и&nbsp;нейроэндокринной регуляции.</p>
+    <p>Можно прочитать пятую книгу по&nbsp;деньгам. Можно пройти десятый курс по&nbsp;инвестициям. Можно поставить три новых KPI на&nbsp;квартал. Доход на&nbsp;время вырастает, и&nbsp;тело откатывает обратно. <strong>Не&nbsp;слабость воли. Не&nbsp;лень.</strong> Биохимия.</p>
 
-    <p>Пока внутри стоит запрет, любые техники, курсы и&nbsp;решения упираются в&nbsp;стену. Можно повторять аффирмации, можно ставить цели, можно вести таблицы доходов: <em>тело будет возвращать вас обратно.</em></p>
+    <p>Кортизол, дофамин, серотонин, окситоцин и&nbsp;ещё несколько сигнальных молекул определяют, <em>какую сумму ваше тело считает безопасной.</em> Выше этой суммы тело включает тревогу, и&nbsp;вы&nbsp;незаметно для себя её&nbsp;сливаете: трата на&nbsp;пустяк, отказ от&nbsp;сделки, опоздание на&nbsp;встречу, ссора в&nbsp;команде.</p>
 
-    <p>Но&nbsp;если режим позволения включился, открываются возможности, которых раньше будто не&nbsp;было. Деньги начинают приходить из&nbsp;источников, в&nbsp;которые вы&nbsp;даже не&nbsp;смотрели. Решения, которые годами были невозможны, становятся очевидными.</p>
+    <p>Это и&nbsp;есть тот самый потолок. Не&nbsp;в&nbsp;голове, а&nbsp;в&nbsp;крови. И&nbsp;пока с&nbsp;ним не&nbsp;поработать на&nbsp;уровне тела, любая надстройка сверху держится не&nbsp;дольше пары месяцев.</p>
   </div>
 
   <div class="permission-callout">
-    <p>На встрече вы увидите, как именно <em>включается</em> режим позволения. И что делать, если у вас он сейчас закрыт.</p>
+    <p>На встрече вы&nbsp;увидите, как&nbsp;собрать <em>свой биохимический портрет дохода</em> и&nbsp;где у&nbsp;вас сейчас находится потолок.</p>
   </div>
 </section>
 
@@ -1232,27 +1214,27 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
   <div class="see-list">
     <div class="see-item">
       <div class="see-num">01</div>
-      <p class="see-text">Почему вся существующая работа с деньгами <strong>работает у меньшинства</strong>, и какой слой реальности это меньшинство случайно затрагивает, не зная об этом</p>
+      <p class="see-text">Почему вся существующая работа с&nbsp;деньгами <strong>работает у&nbsp;меньшинства</strong>, и&nbsp;какой слой реальности это меньшинство случайно затрагивает, не&nbsp;зная об&nbsp;этом</p>
     </div>
     <div class="see-item">
       <div class="see-num">02</div>
-      <p class="see-text">Как устроен <strong>биохимический потолок дохода</strong>, и почему он у каждого человека находится на разной отметке, конкретно и физиологически</p>
+      <p class="see-text">Как устроен <strong>биохимический потолок дохода</strong>, и&nbsp;почему он&nbsp;у&nbsp;каждого человека находится на&nbsp;разной отметке, конкретно и&nbsp;физиологически</p>
     </div>
     <div class="see-item">
       <div class="see-num">03</div>
-      <p class="see-text">Почему «состояние получения», это не метафора и не эзотерика, а <strong>строго определённый гормональный режим</strong>, в который тело либо входит, либо нет</p>
+      <p class="see-text">Почему «состояние получения», это не&nbsp;метафора и&nbsp;не&nbsp;эзотерика, а&nbsp;<strong>строго определённый гормональный режим</strong>, в&nbsp;который тело либо входит, либо нет</p>
     </div>
     <div class="see-item">
       <div class="see-num">04</div>
-      <p class="see-text">Что отличает людей, у которых деньги <strong>прилипают</strong>, от людей, у которых они <strong>утекают</strong>, и почему дело не в дисциплине</p>
+      <p class="see-text">Что отличает людей, у&nbsp;которых деньги <strong>прилипают</strong>, от&nbsp;людей, у&nbsp;которых они <strong>утекают</strong>, и&nbsp;почему дело не&nbsp;в&nbsp;дисциплине</p>
     </div>
     <div class="see-item">
       <div class="see-num">05</div>
-      <p class="see-text">Как именно включается <strong>режим позволения</strong>, и что делать, если у вас он сейчас закрыт</p>
+      <p class="see-text">Как работает <strong>термостат серотонина</strong> и&nbsp;что заставляет его сбрасывать вас обратно ровно к&nbsp;той сумме, на&nbsp;которой вы&nbsp;были полгода назад</p>
     </div>
     <div class="see-item">
       <div class="see-num">06</div>
-      <p class="see-text">Куда смотреть, чтобы наконец <strong>сдвинуть свой финансовый сценарий</strong> из точки, в которой он застрял на годы</p>
+      <p class="see-text">Куда смотреть, чтобы наконец <strong>сдвинуть свой финансовый сценарий</strong> из&nbsp;точки, в&nbsp;которой он&nbsp;застрял на&nbsp;годы</p>
     </div>
   </div>
 </section>
@@ -1782,9 +1764,7 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
 
   /* === ЗАГОЛОВКИ === */
   h2.title{font-size:clamp(26px,6.4vw,34px);line-height:1.18;margin-bottom:24px;letter-spacing:-0.3px;max-width:100%}
-  h2.title br{display:none}
   .bigidea-claim{font-size:clamp(26px,6.4vw,34px);line-height:1.2;letter-spacing:-0.3px}
-  .bigidea-claim br{display:none}
   .lead{font-size:17px;line-height:1.55;margin-bottom:32px;max-width:100%}
   p.body{font-size:16px;line-height:1.7}
 
@@ -1873,7 +1853,6 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
   /* === FINAL === */
   .final{padding:80px 0}
   .final h2{font-size:28px;line-height:1.22}
-  .final h2 br{display:none}
   .final p.sub{font-size:15px;margin-bottom:32px}
   .final::before,.final::after{width:32px}
 
@@ -1905,16 +1884,15 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
     <div class="author-photo"></div>
     <div>
       <div class="author-name">Дарья Ростовцева</div>
-      <div class="author-role">Архитектура сознания</div>
+      <div class="author-role">Основатель «Архитектуры сознания»</div>
       <div class="author-bio">
-        <p>Более 10 лет на стыке нейробиологии, эндокринологии и работы с подсознанием. Создательница «Архитектуры сознания», программы которой прошли более 1 500 человек.</p>
-        <p>Метод опирается на современные исследования: нейроэкономика, эндокринная регуляция, теория поливагуса. <em>Не теория и не «мотивация», а конкретная биохимия,</em> которую можно сдвигать на уровне тела.</p>
-        <p>«Гормоны денег», встреча, на которой эта механика впервые раскрывается в применении к финансовым сценариям.</p>
+        <p>Практик на&nbsp;стыке нейробиологии и&nbsp;работы с&nbsp;подсознанием. Создатель «Протокола остановки ума», «Кода денег», «Внутреннего Авторитета».</p>
+        <p>Научный подход без воды. Практики, которые можно проверить на&nbsp;себе и&nbsp;почувствовать разницу, не&nbsp;через месяц, а&nbsp;в&nbsp;моменте.</p>
       </div>
       <div class="author-nums">
         <div>
-          <div class="au-num">1 500+</div>
-          <div class="au-label">учеников</div>
+          <div class="au-num">1&nbsp;500+</div>
+          <div class="au-label">участников</div>
         </div>
         <div>
           <div class="au-num">10+</div>
@@ -1922,7 +1900,7 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
         </div>
         <div>
           <div class="au-num">92%</div>
-          <div class="au-label">отмечают результат</div>
+          <div class="au-label">отмечают сдвиг</div>
         </div>
       </div>
     </div>
@@ -1936,22 +1914,21 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
       <span>Входит в стоимость</span>
       <span class="line"></span>
     </div>
-    <h2 class="title">Мануал <em>«Пять механизмов сдвига»</em></h2>
-    <p class="lead">PDF на&nbsp;20+ страниц. Базовые практики работы с&nbsp;ключевыми гормональными системами и&nbsp;дневник наблюдений.</p>
+    <h2 class="title">Мануал <em>по итогам встречи</em></h2>
+    <p class="lead">Готовится после эфира, на&nbsp;основе того, что разобрали внутри. Чтобы услышанное не&nbsp;размылось через две недели, а&nbsp;перешло в&nbsp;практику.</p>
   </div>
 
   <div class="bonus-card">
     <div class="bonus-info">
-      <p>Это не&nbsp;замена встречи, а&nbsp;её&nbsp;продолжение. Чтобы то, что вы&nbsp;услышали, осталось с&nbsp;вами не&nbsp;на&nbsp;две недели, а&nbsp;вошло в&nbsp;повседневную жизнь.</p>
+      <p>Внутри будут практики работы с&nbsp;тем, о&nbsp;чём пойдёт речь на&nbsp;встрече. Конкретный состав готовится после эфира и&nbsp;строится вокруг того, что окажется самым важным для участников.</p>
       <div class="bonus-list">
-        <div class="item">Работа с&nbsp;гормоном страха: базовые практики</div>
-        <div class="item">Подходы к&nbsp;пересборке серотонинового термостата</div>
-        <div class="item">Что помогает включить режим позволения</div>
+        <div class="item">Практическая часть к&nbsp;ключевым темам встречи</div>
+        <div class="item">Инструменты, которые можно применять самостоятельно</div>
         <div class="item">Дневник наблюдений за&nbsp;своими реакциями</div>
       </div>
     </div>
     <div class="bonus-mock">
-      <img src="https://github.com/thebodymindcode/biohimmoney/blob/main/Nano%20Banana%202%20-%20Editorial%20book%20cover%20mockup%20for%20a%20premium%20psychologybiology%20guidebook_%20A4%20portrait%20f.png?raw=true" alt="Обложка мануала «Пять механизмов сдвига»">
+      <img src="https://github.com/thebodymindcode/biohimmoney/blob/main/Nano%20Banana%202%20-%20Editorial%20book%20cover%20mockup%20for%20a%20premium%20psychologybiology%20guidebook_%20A4%20portrait%20f.png?raw=true" alt="Обложка мануала">
     </div>
   </div>
 </section>
@@ -1982,7 +1959,7 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
     <div class="tarif-incl">
       <div class="row">Прямой эфир 2&nbsp;часа, 23&nbsp;мая в&nbsp;14:00 МСК</div>
       <div class="row">Запись встречи, доступ навсегда</div>
-      <div class="row">Мануал «Пять механизмов сдвига», PDF&nbsp;20+&nbsp;страниц</div>
+      <div class="row">Мануал по&nbsp;итогам встречи, PDF</div>
       <div class="row">Конспект встречи</div>
       <div class="row">Возможность задать вопрос на&nbsp;встрече</div>
     </div>
@@ -2019,7 +1996,7 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
     </details>
     <details class="faq-item">
       <summary>Я уже многое пробовал, мне опять о том же расскажут?</summary>
-      <p>Если вы уже знали про биохимический потолок дохода, механизм позволения и термостат серотонина, вероятно нет. Если что-то из этого слышите впервые, да.</p>
+      <p>Если вы уже знали про биохимический потолок дохода и термостат серотонина, вероятно нет. Если что-то из этого слышите впервые, да.</p>
     </details>
     <details class="faq-item">
       <summary>Будет ли возможность задать вопрос лично?</summary>
