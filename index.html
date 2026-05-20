@@ -85,6 +85,7 @@ h2.title{
   max-width:920px;
   margin-left:auto;
   margin-right:auto;
+  text-wrap:balance;
 }
 h2.title em{font-style:italic;color:var(--accent);font-weight:400}
 
@@ -97,6 +98,7 @@ h2.title em{font-style:italic;color:var(--accent);font-weight:400}
   margin:0 auto 48px;
   font-weight:400;
   max-width:880px;
+  text-wrap:pretty;
 }
 .lead-punch{
   font-style:normal;
@@ -220,6 +222,7 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
   letter-spacing:-2px;
   color:var(--ink);
   margin-bottom:32px;
+  text-wrap:balance;
 }
 .hero-h1 em{
   font-style:italic;
@@ -459,6 +462,7 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
   color:var(--ink);
   font-weight:400;
   letter-spacing:-0.3px;
+  text-wrap:balance;
 }
 .result-callout .stat-punch strong{
   color:var(--accent);
@@ -864,6 +868,7 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
   letter-spacing:-0.5px;
   max-width:1000px;
   margin:0 auto 64px;
+  text-wrap:balance;
 }
 .bigidea-claim em{font-style:italic;color:var(--accent)}
 
@@ -922,8 +927,96 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
   </div>
 </section>
 
+<section class="discovery">
+  <div class="disc-inner">
+    <div class="disc-eyebrow">
+      <span class="line"></span>
+      <span>Доказанный факт</span>
+      <span class="line"></span>
+    </div>
+
+    <div class="disc-fact">
+      Мозг запускает решение за&nbsp;<span class="disc-hl">треть секунды</span> до&nbsp;того, как вы&nbsp;его осознаёте
+    </div>
+
+    <div class="disc-timeline">
+      <svg viewBox="0 0 880 220" xmlns="http://www.w3.org/2000/svg" width="100%" style="display:block">
+        <line x1="60" y1="130" x2="820" y2="130" stroke="#4B5563" stroke-width="1"/>
+
+        <circle cx="200" cy="130" r="9" fill="#3B82F6"/>
+        <line x1="200" y1="130" x2="200" y2="80" stroke="#3B82F6" stroke-width="1" stroke-dasharray="3 3"/>
+        <text x="200" y="68" font-family="Instrument Serif, Georgia, serif" font-style="italic" font-size="20" fill="#F8F9FB" text-anchor="middle">тело решает</text>
+        <text x="200" y="160" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="1.5" fill="#9CA3AF" text-anchor="middle">0 мс</text>
+
+        <circle cx="560" cy="130" r="9" fill="none" stroke="#F8F9FB" stroke-width="1.5"/>
+        <line x1="560" y1="130" x2="560" y2="80" stroke="#9CA3AF" stroke-width="1" stroke-dasharray="3 3"/>
+        <text x="560" y="68" font-family="Instrument Serif, Georgia, serif" font-style="italic" font-size="20" fill="#F8F9FB" text-anchor="middle">вы осознаёте</text>
+        <text x="560" y="160" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="1.5" fill="#9CA3AF" text-anchor="middle">+350 мс</text>
+
+        <line x1="209" y1="195" x2="551" y2="195" stroke="#3B82F6" stroke-width="0.8"/>
+        <line x1="209" y1="190" x2="209" y2="200" stroke="#3B82F6" stroke-width="0.8"/>
+        <line x1="551" y1="190" x2="551" y2="200" stroke="#3B82F6" stroke-width="0.8"/>
+        <text x="380" y="212" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="2" fill="#3B82F6" text-anchor="middle">РЕШЕНИЕ УЖЕ ПРИНЯТО</text>
+      </svg>
+    </div>
+
+    <div class="disc-text">
+      <p>Это показал нейрофизиолог Бенджамин Либет ещё в&nbsp;восьмидесятых: электрическая активность мозга, запускающая действие, появляется <em>раньше,</em> чем человек чувствует, что «решил сам».</p>
+      <p>С&nbsp;деньгами работает та&nbsp;же механика. Назвать цену, согласиться на&nbsp;сделку, рискнуть, тело реагирует первым, через гормоны. А&nbsp;мысль приходит следом и&nbsp;объясняет уже принятое решение.</p>
+    </div>
+  </div>
+</section>
 
 <style>
+/* === DISCOVERY === */
+.discovery{
+  background:var(--bg-deeper);
+  padding:clamp(80px,9vw,140px) 0;
+}
+.disc-inner{
+  max-width:880px;
+  margin:0 auto;
+  padding:0 clamp(20px,5vw,60px);
+  text-align:center;
+}
+.disc-eyebrow{
+  display:flex;align-items:center;justify-content:center;gap:16px;
+  margin-bottom:48px;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:11px;letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--accent);
+}
+.disc-eyebrow .line{width:32px;height:1px;background:var(--accent);opacity:0.5}
+.disc-fact{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:clamp(32px,5vw,60px);
+  line-height:1.1;
+  color:var(--bg-white);
+  font-weight:400;
+  letter-spacing:-0.5px;
+  margin-bottom:72px;
+  text-wrap:balance;
+}
+.disc-fact .disc-hl{font-style:italic;color:var(--accent)}
+.disc-timeline{
+  max-width:760px;
+  margin:0 auto 64px;
+}
+.disc-text{
+  max-width:680px;
+  margin:0 auto;
+}
+.disc-text p{
+  font-family:'IBM Plex Sans',sans-serif;
+  font-size:clamp(16px,1.6vw,18px);
+  line-height:1.75;
+  color:#D8DCE0;
+  margin-bottom:24px;
+  text-wrap:pretty;
+}
+.disc-text p:last-child{margin-bottom:0}
+.disc-text em{font-style:italic;color:var(--accent)}
+
 /* === POZVOLENIE === */
 .pozvol{
   background:var(--bg);
@@ -979,6 +1072,7 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
   line-height:1.4;
   color:var(--ink);
   font-weight:400;
+  text-wrap:balance;
 }
 .permission-callout em{color:var(--accent);font-style:italic;font-weight:500}
 
@@ -1088,8 +1182,91 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
   line-height:1.35;
   color:var(--ink);
   font-weight:400;
+  text-wrap:balance;
 }
 .shadow-quote-text em{color:var(--accent);font-style:italic}
+
+/* === COST OF INACTION === */
+.cost-inaction{
+  background:var(--bg-soft);
+  padding:140px 0;
+}
+.cost-inaction .text{text-align:center;margin-bottom:64px}
+.ci-graphic{
+  max-width:960px;
+  margin:0 auto 80px;
+  padding:0 clamp(20px,5vw,60px);
+}
+.ci-points{
+  max-width:1000px;
+  margin:0 auto;
+  padding:0 clamp(20px,5vw,60px);
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:48px;
+}
+.ci-point{text-align:center}
+.ci-icon{
+  width:40px;height:40px;
+  margin:0 auto 20px;
+}
+.ci-icon svg{width:100%;height:100%}
+.ci-point p{
+  font-family:'IBM Plex Sans',sans-serif;
+  font-size:clamp(15px,1.5vw,16px);
+  line-height:1.6;
+  color:var(--ink-mid);
+}
+.ci-punch{
+  max-width:780px;
+  margin:80px auto 0;
+  padding:0 clamp(20px,5vw,60px);
+  text-align:center;
+}
+.ci-punch p{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-size:clamp(24px,3vw,34px);
+  line-height:1.3;
+  color:var(--ink);
+  font-weight:400;
+  text-wrap:balance;
+}
+.ci-punch em{font-style:italic;color:var(--accent)}
+
+/* === OBJECTIONS === */
+.objections{
+  background:var(--bg);
+  padding:140px 0;
+}
+.objections .text{text-align:center;margin-bottom:72px}
+.obj-list{
+  max-width:920px;
+  margin:0 auto;
+  padding:0 clamp(20px,5vw,60px);
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1px;
+  background:var(--line);
+  border:0.5px solid var(--line);
+}
+.obj-item{
+  background:var(--bg);
+  padding:clamp(28px,3vw,40px);
+}
+.obj-q{
+  font-family:'Instrument Serif',Georgia,serif;
+  font-style:italic;
+  font-size:clamp(20px,2.2vw,26px);
+  color:var(--accent);
+  margin-bottom:14px;
+  line-height:1.2;
+}
+.obj-a{
+  font-family:'IBM Plex Sans',sans-serif;
+  font-size:clamp(15px,1.5vw,16px);
+  line-height:1.65;
+  color:var(--ink-mid);
+}
 
 /* === WHAT YOU SEE === */
 .what-see{
@@ -1205,6 +1382,79 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
       <polyline points="142,53 148,58 142,63" fill="none" stroke="#3B82F6" stroke-width="0.7"/>
     </svg>
     <p class="shadow-quote-text">Пока вы&nbsp;её&nbsp;не&nbsp;видите, вы&nbsp;боретесь с&nbsp;<em>тенью на&nbsp;стене,</em> не&nbsp;понимая, что фигуру отбрасывает совсем другой источник света.</p>
+  </div>
+</section>
+
+<section class="cost-inaction">
+  <div class="narrow text">
+    <div class="eyebrow">
+      <span class="line"></span>
+      <span>Что будет, если оставить как есть</span>
+      <span class="line"></span>
+    </div>
+    <h2 class="title">Термостат не&nbsp;выключается сам</h2>
+    <p class="lead">Пока вы&nbsp;не&nbsp;знаете, на&nbsp;какой отметке стоит ваш термостат и&nbsp;как он&nbsp;работает, всё повторяется по&nbsp;одному кругу. Год за&nbsp;годом.</p>
+  </div>
+
+  <div class="ci-graphic">
+    <svg viewBox="0 0 900 360" xmlns="http://www.w3.org/2000/svg" width="100%" style="display:block">
+      <line x1="80" y1="300" x2="840" y2="300" stroke="#1F2937" stroke-width="1.2"/>
+      <line x1="80" y1="40" x2="80" y2="300" stroke="#1F2937" stroke-width="1.2"/>
+
+      <line x1="80" y1="180" x2="840" y2="180" stroke="#3B82F6" stroke-width="0.8" stroke-dasharray="6 5" opacity="0.6"/>
+      <text x="848" y="184" font-family="Instrument Serif, Georgia, serif" font-style="italic" font-size="16" fill="#3B82F6">потолок</text>
+
+      <path d="M 100 240 L 180 170 L 240 245 L 320 250 L 400 175 L 480 248 L 560 250 L 640 172 L 720 246 L 800 248"
+            fill="none" stroke="#1F2937" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <circle cx="180" cy="170" r="5" fill="#6B7280"/>
+      <circle cx="400" cy="175" r="5" fill="#6B7280"/>
+      <circle cx="640" cy="172" r="5" fill="#6B7280"/>
+
+      <circle cx="100" cy="240" r="6" fill="#1F2937"/>
+      <circle cx="800" cy="248" r="6" fill="#1F2937"/>
+
+      <text x="100" y="335" font-family="IBM Plex Mono, monospace" font-size="13" letter-spacing="2" fill="#6B7280">СЕГОДНЯ</text>
+      <text x="800" y="335" font-family="IBM Plex Mono, monospace" font-size="13" letter-spacing="2" fill="#6B7280" text-anchor="end">ЧЕРЕЗ ГОД</text>
+
+      <text x="450" y="100" font-family="Instrument Serif, Georgia, serif" font-style="italic" font-size="22" fill="#1F2937" text-anchor="middle">та же сумма, тот же круг</text>
+    </svg>
+  </div>
+
+  <div class="ci-points">
+    <div class="ci-point">
+      <div class="ci-icon">
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="15" fill="none" stroke="#1F2937" stroke-width="1.4"/>
+          <line x1="20" y1="20" x2="20" y2="11" stroke="#1F2937" stroke-width="1.4" stroke-linecap="round"/>
+          <line x1="20" y1="20" x2="27" y2="23" stroke="#1F2937" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <p>Ещё один курс, ещё одна книга, ещё один рывок. И&nbsp;снова откат к&nbsp;старой сумме через пару месяцев.</p>
+    </div>
+    <div class="ci-point">
+      <div class="ci-icon">
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 10 14 Q 20 8 30 14" fill="none" stroke="#1F2937" stroke-width="1.4" stroke-linecap="round"/>
+          <line x1="20" y1="12" x2="20" y2="30" stroke="#1F2937" stroke-width="1.4" stroke-linecap="round"/>
+          <circle cx="20" cy="32" r="1.6" fill="#1F2937"/>
+        </svg>
+      </div>
+      <p>Возможности проходят мимо: сделка, к&nbsp;которой вы&nbsp;не&nbsp;были готовы телом, разговор, на&nbsp;который не&nbsp;хватило спокойствия.</p>
+    </div>
+    <div class="ci-point">
+      <div class="ci-icon">
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="15" fill="none" stroke="#1F2937" stroke-width="1.4"/>
+          <line x1="13" y1="13" x2="27" y2="27" stroke="#1F2937" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <p>Главное: вы&nbsp;продолжаете искать причину там, где её&nbsp;нет. В&nbsp;мышлении, в&nbsp;дисциплине, в&nbsp;мотивации.</p>
+    </div>
+  </div>
+
+  <div class="ci-punch">
+    <p>Через год вы&nbsp;можете оказаться там&nbsp;же, где сейчас. <em>А&nbsp;можете уже понимать, что именно вас держит.</em></p>
   </div>
 </section>
 
@@ -1595,6 +1845,7 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
   margin:0 auto 28px;
   color:var(--ink);
   font-weight:400;
+  text-wrap:balance;
 }
 .final h2 em{color:var(--accent);font-style:italic}
 .final p.sub{
@@ -1838,6 +2089,31 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
   .three-disc{height:auto;min-height:auto}
   .three-disc-desktop{display:none}
 
+  /* === DISCOVERY === */
+  .discovery{padding:64px 0}
+  .disc-eyebrow{margin-bottom:32px;font-size:10px}
+  .disc-eyebrow .line{width:20px}
+  .disc-fact{font-size:clamp(28px,8vw,40px);margin-bottom:48px;line-height:1.12}
+  .disc-timeline{margin-bottom:40px;overflow:hidden}
+  .disc-text p{font-size:16px}
+
+  /* === OBJECTIONS === */
+  .objections{padding:64px 0}
+  .objections .text{margin-bottom:48px}
+  .obj-list{grid-template-columns:1fr;padding:0 20px;max-width:100%}
+  .obj-item{padding:28px 22px}
+  .obj-q{font-size:20px}
+  .obj-a{font-size:15px}
+
+  /* === COST OF INACTION === */
+  .cost-inaction{padding:64px 0}
+  .ci-points{grid-template-columns:1fr;gap:32px;padding:0 20px}
+  .ci-point{text-align:center}
+  .ci-point p{font-size:15px}
+  .ci-punch{margin-top:48px;padding:0 20px}
+  .ci-punch p{font-size:22px}
+  .ci-graphic{margin-bottom:48px;padding:0 16px;overflow:hidden}
+
   /* === SEE LIST === */
   .see-list{padding:0 20px;max-width:100%}
   .see-item{grid-template-columns:42px 1fr;gap:14px;padding:24px 0}
@@ -2015,6 +2291,36 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
       <div class="row">Возможность задать вопрос на&nbsp;встрече</div>
     </div>
     <a href="https://payform.ru/3ebxg1r/" class="tarif-cta" target="_blank" rel="noopener">Получить доступ →</a>
+  </div>
+</section>
+
+<section class="objections">
+  <div class="narrow text">
+    <div class="eyebrow">
+      <span class="line"></span>
+      <span>Если сомневаетесь</span>
+      <span class="line"></span>
+    </div>
+    <h2 class="title">Скорее всего, вы&nbsp;уже подумали<br>что-то из&nbsp;<em>этого</em></h2>
+  </div>
+
+  <div class="obj-list">
+    <div class="obj-item">
+      <div class="obj-q">«Я не&nbsp;верю в&nbsp;эзотерику»</div>
+      <div class="obj-a">И&nbsp;правильно. Здесь нет ни&nbsp;энергий, ни&nbsp;родовых программ, ни&nbsp;денежных эгрегоров. Только нейроэндокринология: гормоны, которые можно измерить в&nbsp;анализе крови.</div>
+    </div>
+    <div class="obj-item">
+      <div class="obj-q">«Я уже всё это проходил»</div>
+      <div class="obj-a">Психологию денег, расстановки, коучинг, возможно. Но&nbsp;биохимию финансовых решений почти никто не&nbsp;разбирает. Об&nbsp;этом слое говорят единицы.</div>
+    </div>
+    <div class="obj-item">
+      <div class="obj-q">«У&nbsp;меня нет проблем с&nbsp;деньгами»</div>
+      <div class="obj-a">Речь не&nbsp;о&nbsp;выживании. Речь о&nbsp;потолке: о&nbsp;той сумме, выше которой подняться почему-то не&nbsp;получается, сколько ни&nbsp;старайся.</div>
+    </div>
+    <div class="obj-item">
+      <div class="obj-q">«Звучит слишком просто»</div>
+      <div class="obj-a">Механизм простой. Увидеть его у&nbsp;себя и&nbsp;начать с&nbsp;ним работать, нет. Иначе все давно бы&nbsp;это сделали.</div>
+    </div>
   </div>
 </section>
 
