@@ -278,6 +278,14 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
 @keyframes orbit-slow{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
 @keyframes pulse-r{0%,100%{r:5}50%{r:7}}
 @keyframes line-flow{from{stroke-dashoffset:0}to{stroke-dashoffset:-30}}
+@keyframes label-pulse{
+  0%,100%{fill:#1E40AF;opacity:0.4;font-weight:400}
+  50%{fill:#3B82F6;opacity:1;font-weight:700}
+}
+@keyframes label-pulse-soft{
+  0%,100%{fill:#6B7280;opacity:0.45;font-weight:400}
+  50%{fill:#3B82F6;opacity:1;font-weight:700}
+}
 .drift-1{animation:drift 5s ease-in-out infinite}
 .drift-2{animation:drift 6s ease-in-out infinite reverse}
 .drift-3{animation:drift 7s ease-in-out infinite}
@@ -285,6 +293,8 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
 .orbit{transform-origin:center;animation:orbit-slow 80s linear infinite}
 .pulse{animation:pulse-r 3s ease-in-out infinite}
 .flow{stroke-dasharray:6 6;animation:line-flow 4s linear infinite}
+.label-pulse{animation:label-pulse 2.5s ease-in-out infinite}
+.label-pulse-soft{animation:label-pulse-soft 2.5s ease-in-out infinite;animation-delay:1.25s}
 
 .hero-cta-block{
   display:flex;
@@ -311,7 +321,7 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
       <line x1="380" y1="40" x2="380" y2="80" stroke="#9CA3AF" stroke-width="0.5" stroke-dasharray="2 4"/>
       <line x1="380" y1="280" x2="380" y2="320" stroke="#9CA3AF" stroke-width="0.5" stroke-dasharray="2 4"/>
 
-      <text x="380" y="32" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="2.5" fill="#6B7280" text-anchor="middle">МЫСЛЬ · ЛОГИКА · СОЗНАНИЕ</text>
+      <text x="380" y="32" class="label-pulse-soft" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="2.5" fill="#6B7280" text-anchor="middle">МЫСЛЬ · ЛОГИКА · СОЗНАНИЕ</text>
 
       <line x1="60" y1="180" x2="280" y2="180" stroke="#D8DCE0" stroke-width="0.5"/>
       <line x1="480" y1="180" x2="700" y2="180" stroke="#D8DCE0" stroke-width="0.5"/>
@@ -364,7 +374,7 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
           <circle cx="-50" cy="55" r="3" fill="#3B82F6" class="pulse"/>
         </g>
 
-        <text x="0" y="106" font-family="IBM Plex Mono, monospace" font-size="9" letter-spacing="2" fill="#1E40AF" text-anchor="middle">ТЕЛО · КРОВЬ · БИОХИМИЯ</text>
+        <text x="0" y="106" class="label-pulse" font-family="IBM Plex Mono, monospace" font-size="9" letter-spacing="2" fill="#1E40AF" text-anchor="middle">ТЕЛО · КРОВЬ · БИОХИМИЯ</text>
       </g>
 
       <text x="150" y="305" font-family="Instrument Serif, Georgia, serif" font-size="13" font-style="italic" fill="#6B7280" text-anchor="middle">что вы видите</text>
@@ -1534,7 +1544,7 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
         <line x1="46" y1="37" x2="52" y2="37" stroke="#3B82F6" stroke-width="0.8"/>
       </svg>
       <div class="for-num">01</div>
-      <h3 class="for-title">Вы&nbsp;уже многое<br>попробовали</h3>
+      <h3 class="for-title">Вы&nbsp;уже многое пробовали</h3>
       <p class="for-text">И&nbsp;устали от&nbsp;методов, которые работают «у&nbsp;всех, кроме меня». Курсы, расстановки, психотерапия, аффирмации. Что-то заходило на&nbsp;момент, но&nbsp;не&nbsp;оставалось.</p>
     </div>
     <div class="for-card">
@@ -1549,7 +1559,7 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
         <line x1="38" y1="32" x2="54" y2="32" fill="none" stroke="#9CA3AF" stroke-width="1" stroke-dasharray="2 2" opacity="0.5"/>
       </svg>
       <div class="for-num">02</div>
-      <h3 class="for-title">Вы&nbsp;упираетесь<br>в&nbsp;невидимое</h3>
+      <h3 class="for-title">Вы&nbsp;упираетесь в&nbsp;невидимое</h3>
       <p class="for-text">Знаете, что где-то стоит барьер. Не&nbsp;можете найти, где именно. Каждый месяц чувствуете, что повторяется один и&nbsp;тот&nbsp;же сценарий, но&nbsp;не&nbsp;понимаете, почему.</p>
     </div>
     <div class="for-card">
@@ -1563,7 +1573,7 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
         <text x="42" y="14" font-family="IBM Plex Mono, monospace" font-size="6" fill="#3B82F6" text-anchor="middle" letter-spacing="1">ТЕЛО</text>
       </svg>
       <div class="for-num">03</div>
-      <h3 class="for-title">Умом понимаете,<br>в&nbsp;теле не&nbsp;идёт</h3>
+      <h3 class="for-title">Умом понимаете, в&nbsp;теле не&nbsp;идёт</h3>
       <p class="for-text">Логически про деньги вы&nbsp;знаете всё. Знаете, как считать, как просить, как продавать. Но&nbsp;в&nbsp;момент реального действия что-то сжимается, и&nbsp;вы&nbsp;делаете совсем другое.</p>
     </div>
     <div class="for-card">
@@ -1575,7 +1585,7 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
         <circle cx="32" cy="32" r="4" fill="#3B82F6"/>
       </svg>
       <div class="for-num">04</div>
-      <h3 class="for-title">Хотите увидеть<br>механику</h3>
+      <h3 class="for-title">Хотите увидеть механику</h3>
       <p class="for-text">А&nbsp;не&nbsp;очередную её&nbsp;интерпретацию. Без эзотерики, без «энергий». Конкретную, проверяемую механику, которая объясняет, что именно происходит в&nbsp;вашем теле в&nbsp;момент финансового решения.</p>
     </div>
   </div>
@@ -2149,7 +2159,6 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
   .for-num{font-size:20px;margin-bottom:12px}
   .for-title{font-size:20px;line-height:1.2;margin-bottom:12px}
   .for-text{font-size:15px;line-height:1.6}
-  .for-title br{display:none}
 
   /* === АВТОР === */
   .author-grid{grid-template-columns:1fr;gap:32px;padding:0 20px;max-width:100%}
