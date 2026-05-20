@@ -471,11 +471,11 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
   <div class="narrow text-block">
     <div class="eyebrow">
       <span class="line"></span>
-      <span>Что было до сих пор</span>
+      <span>Вопрос, который мучает годами</span>
       <span class="line"></span>
     </div>
-    <h2 class="title">Тридцать лет ищут ключ<br><em>не там, где он лежит</em></h2>
-    <p class="lead">Вся индустрия личностного роста разделилась на&nbsp;пять направлений. Каждое смотрит в&nbsp;свою сторону, и&nbsp;каждое мимо.</p>
+    <h2 class="title">Вы&nbsp;занимаетесь деньгами годами.<br>А&nbsp;сдвиг <em>почти не&nbsp;происходит</em></h2>
+    <p class="lead">Курсы, книги, расстановки, терапия. Что-то даже срабатывает, доход подрастает. А&nbsp;через пару месяцев всё откатывается назад, и&nbsp;вы&nbsp;снова на&nbsp;старой отметке. Почему?</p>
   </div>
 
   <div class="disciplines">
@@ -555,8 +555,8 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
   </div>
 
   <div class="result-callout">
-    <p class="stat-text"><em>Тысячи книг, миллионы курсов, бесчисленные методики.</em></p>
-    <p class="stat-punch">И при этом результат у&nbsp;большинства людей <strong>не&nbsp;меняется.</strong></p>
+    <p class="stat-text"><em>Каждое из&nbsp;этих направлений работает. И&nbsp;помогает миллионам людей.</em></p>
+    <p class="stat-punch">Но&nbsp;есть один слой, которого <strong>не&nbsp;касается ни&nbsp;одно из&nbsp;них.</strong> И&nbsp;именно он держит вас на&nbsp;старой отметке.</p>
   </div>
 </section>
 
@@ -1058,7 +1058,7 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
   </div>
 
   <div class="permission-callout">
-    <p>На встрече вы&nbsp;увидите, как&nbsp;собрать <em>свой биохимический портрет дохода</em> и&nbsp;где у&nbsp;вас сейчас находится потолок.</p>
+    <p>В&nbsp;субботу, 23&nbsp;мая, на&nbsp;живой онлайн-встрече вы&nbsp;увидите, как&nbsp;формируется <em>биохимический портрет дохода</em> и&nbsp;по&nbsp;какой механике тело удерживает свой потолок.</p>
   </div>
 </section>
 
@@ -1779,14 +1779,60 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
   .eyebrow{font-size:9px;letter-spacing:0.22em;margin-bottom:18px;gap:10px}
   .eyebrow .line{width:18px}
 
-  /* === DISCIPLINES (5 направлений) === */
-  .disciplines{grid-template-columns:1fr;padding:0 20px;max-width:100%}
-  .discipline{border-right:none;border-bottom:0.5px solid var(--line);padding:32px 16px;text-align:center;display:block}
-  .discipline:last-child{border-bottom:none}
-  .discipline-num{margin-bottom:20px;font-size:10px}
-  .discipline-svg{width:42px;height:42px;margin:0 auto 18px}
-  .discipline-name{font-size:22px;margin-bottom:8px;line-height:1.2}
-  .discipline-what{font-size:14px;line-height:1.5}
+  /* === DISCIPLINES (5 направлений) ПЛИТКИ === */
+  .disciplines{
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    padding:0 20px;
+    max-width:100%;
+    border-top:none;
+    border-bottom:none;
+  }
+  .discipline{
+    border:0.5px solid var(--line);
+    border-right:0.5px solid var(--line);
+    border-bottom:0.5px solid var(--line);
+    background:var(--bg-white);
+    padding:24px 16px 22px;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    position:relative;
+    border-radius:2px;
+  }
+  .discipline:last-child{
+    border:0.5px solid var(--line);
+    grid-column:1 / 3;
+  }
+  .discipline-num{
+    position:absolute;
+    top:12px;left:14px;
+    margin:0;
+    font-size:11px;
+    color:var(--accent);
+    font-family:'IBM Plex Mono',monospace;
+    letter-spacing:1px;
+  }
+  .discipline-svg{
+    width:40px;height:40px;
+    margin:8px 0 16px;
+  }
+  .discipline-name{
+    font-size:18px;
+    margin:0 0 6px;
+    line-height:1.15;
+  }
+  .discipline-name br{display:none}
+  .discipline-what{
+    font-size:12px;
+    line-height:1.3;
+    color:var(--ink-faint);
+    margin:0;
+    font-family:'IBM Plex Sans',sans-serif;
+  }
+  .discipline-what br{display:none}
 
   /* === ГРАФИКИ ШИРИНА И ОТСТУПЫ === */
   .termostat-graphic, .three-disc, .hero-graphic{padding:0;overflow:hidden}
