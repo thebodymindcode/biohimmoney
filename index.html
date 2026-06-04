@@ -1568,16 +1568,17 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
 .qtest-verdict{
   font-family:'Instrument Serif',Georgia,serif;font-style:italic;
   font-size:clamp(22px,2.8vw,30px);line-height:1.35;color:var(--ink);text-wrap:balance;
-  max-width:720px;margin:0 auto;opacity:0;transform:translateY(6px);transition:opacity .35s, transform .35s;
+  max-width:720px;margin:0 auto;display:none;
 }
-.qtest-verdict.show{opacity:1;transform:none}
+.qtest-verdict.show{display:block;animation:qtFade .4s ease}
 .qtest-verdict em{color:var(--accent);font-style:italic}
 .qtest-cta{
-  display:inline-block;margin-top:28px;opacity:0;pointer-events:none;transition:opacity .35s;
+  display:none;margin-top:28px;
   background:var(--accent);color:#fff;padding:18px 40px;text-decoration:none;
   font-family:'IBM Plex Sans',sans-serif;font-size:13px;letter-spacing:0.18em;text-transform:uppercase;font-weight:500;
 }
-.qtest-cta.show{opacity:1;pointer-events:auto}
+.qtest-cta.show{display:inline-block;animation:qtFade .4s ease}
+@keyframes qtFade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 .qtest-cta:hover{background:var(--accent-dark)}
 @media(max-width:900px){
   .qtest{padding:56px 0 !important}
@@ -2463,10 +2464,10 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
 .inc-media{margin-bottom:30px}
 .inc-card--book .inc-media{display:flex;justify-content:flex-start}
 .inc-cover{
-  width:210px;max-width:60%;aspect-ratio:4/5;
-  border:1px solid var(--line);background:var(--bg);overflow:hidden;
+  width:210px;max-width:62%;border-radius:3px;overflow:hidden;
+  box-shadow:0 22px 45px -14px rgba(15,23,42,0.55), 0 6px 16px -6px rgba(15,23,42,0.35);
 }
-.inc-cover img{width:100%;height:100%;object-fit:cover;display:block}
+.inc-cover img{width:100%;height:auto;display:block}
 .inc-name{
   font-family:'Instrument Serif',Georgia,serif;
   font-size:clamp(27px,2.9vw,36px);line-height:1.12;font-weight:400;
@@ -2624,7 +2625,7 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
     <div class="inc-card inc-card--book">
       <div class="inc-badge"><span class="b-line"></span>В комплекте</div>
       <div class="inc-media">
-        <div class="inc-cover"><img src="https://github.com/thebodymindcode/biohimmoney/blob/main/Nano%20Banana%202%20-%20Editorial%20book%20cover%20mockup_%20FLAT%20FRONT%20VIEW_A%20premium%20psychologybiology%20guidebook%20c.png?raw=true" alt="Книга «Механизмы сдвига»"></div>
+        <div class="inc-cover"><img src="https://thebodymindcode.github.io/moneybook/cover%20(1).jpg" alt="Книга «Механизмы сдвига»"></div>
       </div>
       <div class="inc-name">Книга <em>«Механизмы сдвига»</em></div>
       <div class="inc-chips">
@@ -2945,7 +2946,7 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
     </div>
     <div class="ta-right">
       <div class="ta-price">690&nbsp;₽</div>
-      <a href="https://payform.ru/rabGrGB/" class="ta-cta" target="_blank" rel="noopener">Купить книгу →</a>
+      <a href="https://thebodymindcode.github.io/moneybook/" class="ta-cta" target="_blank" rel="noopener">Купить книгу →</a>
     </div>
   </div>
 </section>
@@ -3067,5 +3068,16 @@ p.body em{font-style:italic;color:var(--accent);font-weight:500}
   <a href="#tarif" class="mb-btn">Получить доступ →</a>
 </div>
 
+<style>
+/* === ЕДИНЫЕ ОТСТУПЫ СЕКЦИЙ НА МОБАЙЛЕ === */
+@media(max-width:900px){
+  .thirty-years,.recog,.termostat,.styk,.bigidea,.pozvol,.discovery,.shadow-quote,
+  .cost-inaction,.qtest,.what-see,.for-whom,.author,.includes,.bookinside,.changes,
+  .howto,.tarif,.objections,.faq,.final{
+    padding-top:40px !important;
+    padding-bottom:40px !important;
+  }
+}
+</style>
 </body>
 </html>
